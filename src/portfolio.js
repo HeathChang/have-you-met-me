@@ -20,11 +20,14 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
-  subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
-  ),
+  username: "Hyunsoo Chang",
+  usernameKorean: "장현수  🚀",
+  title: "혹시 저를 만나보셨나요? ",
+  subTitle: [
+    emoji(
+      "새로운 기술을 탐구하고, 문제를 주도적으로 해결하며, \n 프로젝트의 본질적인 가치를 고민하는  프론트엔드 개발자."
+    )
+  ],
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -33,13 +36,9 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/HeathChang",
+  gmail: "jannhyunsoo@gmail.com",
+  stackoverflow: "https://heathworld.tistory.com/",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -48,16 +47,12 @@ const socialMediaLinks = {
 // Skills Section
 
 const skillsSection = {
-  title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  title: "기술 스택",
+  subTitle: "새로운 프론트엔드 기술을 끊임없이 탐구하는 개발자",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    {key: emoji("⚡ CI/CD, 배포 및 서버 관리"), value: "효율적인 CI/CD 파이프라인 구축 및 서버 환경 구축하는 개발자"},
+    {key: emoji("⚡ 프론트엔드 컴포넌트화"), value: "컴포넌트화에 열정적인 프론트엔드 개발자"},
+    {key: emoji("⚡ AtoZ 참여하는 개발자"), value: "기획부터 QA까지 모든 개발 과정에 적극 참여하는 개발자"},
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -126,24 +121,20 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      schoolName: "상명대학교",
+      subHeader: "경제금융학과(전공), 빅데이터과학(연계전공)",
+      duration: "2013.03 ~ 2020.02",
     },
     {
       schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
-    }
+      subHeader: "뉴질랜드 (오클랜드) 소재 고등학교",
+      duration: "2009.08 ~ 2012.05",
+    },
+    {
+      schoolName: "자바(JAVA) 기반 백엔드 개발자 양성과정 [NCS] 수료",
+      subHeader: "@에이콘아카데미",
+      duration: "2021.03",
+    },
   ]
 };
 
@@ -174,31 +165,46 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "대리",
+      company: "공업사 스토어",
+      companylogo: require("./assets/images/gongupsaLogo.png"),
+      color: [3, 30, 113],
+      date: "24.05 ~ 현재",
+      desc: "자사 관리프로그램 개발,\n  CI/CD 구축, AWS 배포/서버 관리.\n",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Cafe24 기반 & Ecount 을  통합 사용가능한 자사 관리 프로그램 개발",
+        "IndexedDB와 React Query 를 통한 데이터 처리 속도 개선",
+        "CI/CD 파이프라인 구축을 통해 배포 자동화 및 AWS 배포 및 서버 환경 관리",
+        "기획 & UIUX 설계 & ERD 설계",
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "SW 엔지니어",
+      company: "스페클립스",
+      companylogo: require("./assets/images/speclipseLogo.png"),
+      color: [245, 151, 42],
+      date: "2023.02 ~ 2024.05",
+      desc: "어드민 페이지 개발,\n 테스트 서버 구축 및 \n Three.JS 신체 부위 판별 개발.",
+      descBullets: [
+        "디자인 프레임워크를 활용한 어드민 페이지 개발",
+        "Nginx 및 Docker를 활용한 Test Server 환경 구축",
+        "마우스 인터랙션을 통해 신체 부위를 판별하는 기능 개발"
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "연구원",
+      company: "앱지",
+      companylogo: require("./assets/images/appgLogo.png"),
+      color: [232, 24, 25],
+      date: "2022.07 ~ 2022.11",
+      desc: "하이브리드 웹/앱 개발\n\n",
+      descBullets: [
+        "LVMC 하이브리드앱 개발",
+        "코리아컨벤션 이벤트관리 및 좌석예약 개발",
+      ]
     }
   ]
+
 };
 
 /* Your Open Source Section to View Your Github Pinned Projects
@@ -246,9 +252,9 @@ const bigProjects = {
 // Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("달성 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "",
 
   achievementsCards: [
     {

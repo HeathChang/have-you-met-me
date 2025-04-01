@@ -21,39 +21,48 @@ export default function Greeting() {
           <div className="greeting-text-div">
             <div>
               <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+                className={ isDark ? "dark-mode greeting-text-h1" : "greeting-text" }
               >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
+                { " " }
+                { greeting.title }{ " " }
+                <span className="wave-emoji">{ emoji("👋") }</span>
               </h1>
+
               <p
+                style={ {whiteSpace: "pre-line"} }
                 className={
                   isDark
                     ? "dark-mode greeting-text-p"
                     : "greeting-text-p subTitle"
                 }
               >
-                {greeting.subTitle}
+                { greeting.subTitle }
               </p>
-              <div id="resume" className="empty-div"></div>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <a
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
-                    className="download-link-button"
-                  >
-                    <Button text="Download my resume" />
-                  </a>
-                )}
-              </div>
+              <h1
+                className={ isDark ? "dark-mode greeting-text-h1" : "greeting-text" }
+              >
+                { " " }{ greeting.usernameKorean }{ " " }
+              </h1>
+
+                <div id="resume" className="empty-div"></div>
+                <SocialMedia />
+                <div className="button-greeting-div">
+                  <Button text="연락" href="#contact" />
+                  { greeting.resumeLink && (
+                    <a
+                      href={ "https://www.notion.so/Have-you-met-Heath-29fdca7b209e4acc8496067014fbdbe8" }
+                      download="Resume.pdf"
+                      target="_blank"
+                      className="download-link-button"
+                    >
+                      <Button text="이력서" />
+                    </a>
+                  ) }
+                </div>
             </div>
           </div>
           <div className="greeting-image-div">
-            {illustration.animated ? (
+            { illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img

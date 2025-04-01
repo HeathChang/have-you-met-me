@@ -6,9 +6,9 @@ export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
 
-  function getColorArrays() {
+  function getColorArrays(color) {
     const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    setColorArrays(!color ? colorThief.getColor(imgRef.current) : color);
   }
 
   function rgb(values) {
@@ -44,7 +44,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           className="experience-roundedimg"
           src={cardInfo.companylogo}
           alt={cardInfo.company}
-          onLoad={() => getColorArrays()}
+          onLoad={() => getColorArrays(cardInfo.color)}
         />
       </div>
       <div className="experience-text-details">
@@ -67,6 +67,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           {cardInfo.date}
         </h5>
         <p
+          style={{ whiteSpace: "pre-line"}}
           className={
             isDark
               ? "subTitle experience-text-desc dark-mode-text"
@@ -75,7 +76,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.desc}
         </p>
-        <ul>
+        <ul style={{ display: "grid", gap: "1rem", padding: "1rem"}}>
           <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
         </ul>
       </div>

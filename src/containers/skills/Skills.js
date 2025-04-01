@@ -44,21 +44,22 @@ export default function Skills() {
               {skillsSection.subTitle}
             </p>
             <SoftwareSkill />
-            <div>
+            <div >
               {skillsSection.skills.map((skills, i) => {
                 return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
+                    <p
+                      key={i}
+                      style={{ whiteSpace: "pre-line"}}
+                      className={
+                        isDark
+                          ? "dark-mode subTitle skills-text"
+                          : "subTitle skills-text"
+                      }>
+                      <strong>{ skills?.key }:</strong>
+                      <em>{ skills?.value }:</em>
+                    </p>
                 );
-              })}
+              }) }
             </div>
           </div>
         </Fade>
