@@ -54,8 +54,12 @@ const Main = () => {
             {/* SECT: 스킬셋 */}
             <Skills />
 
-            {/* SECT:  경력() */}
+            {/* SECT:  경력 */}
             <WorkExperience />
+
+
+            {/* SECT: 성과(Big Projects) */}
+            <StartupProject />
 
             {/* SECT: 학력(Education) */}
             <Education />
@@ -63,8 +67,6 @@ const Main = () => {
             {/* SECT: 프로젝트(Open Source Projects) */}
             <Projects />
 
-            {/* SECT: 성과(Big Projects) */}
-            <StartupProject />
 
             {/* SECT: 내 개인 정보 */}
             <Profile />

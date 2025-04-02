@@ -48,6 +48,7 @@ export default function StartupProject() {
                       <img
                         src={project.image}
                         alt={project.projectName}
+                        style={{ width: "250px", height: "250px"}}
                         className="card-image"
                       ></img>
                     </div>
@@ -59,6 +60,7 @@ export default function StartupProject() {
                       {project.projectName}
                     </h5>
                     <p
+                      style={{ whiteSpace: "pre-line"}}
                       className={
                         isDark ? "dark-mode card-subtitle" : "card-subtitle"
                       }
@@ -71,10 +73,11 @@ export default function StartupProject() {
                           return (
                             <span
                               key={i}
+                              style={{opacity: project.disabled ? 0.5 : 1}}
                               className={
                                 isDark ? "dark-mode project-tag" : "project-tag"
                               }
-                              onClick={() => openUrlInNewTab(link.url)}
+                              onClick={() => !project.disabled && openUrlInNewTab(link.url)}
                             >
                               {link.name}
                             </span>

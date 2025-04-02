@@ -50,9 +50,9 @@ const skillsSection = {
   title: "기술 스택",
   subTitle: "새로운 프론트엔드 기술을 끊임없이 탐구하는 개발자",
   skills: [
-    {key: emoji("⚡ CI/CD, 배포 및 서버 관리"), value: "효율적인 CI/CD 파이프라인 구축 및 서버 환경 구축하는 개발자"},
-    {key: emoji("⚡ 프론트엔드 컴포넌트화"), value: "컴포넌트화에 열정적인 프론트엔드 개발자"},
-    {key: emoji("⚡ AtoZ 참여하는 개발자"), value: "기획부터 QA까지 모든 개발 과정에 적극 참여하는 개발자"},
+    {key: emoji("⚡ CI/CD, 배포 및 서버 관리"), value: "효율적인 CI/CD 파이프라인과 서버 환경를 구축하는"},
+    {key: emoji("⚡ 프론트엔드 컴포넌트화"), value: "컴포넌트화에 열정적인 프론트엔드"},
+    {key: emoji("⚡ AtoZ 참여하는 개발자"), value: "기획부터 QA까지 모든 개발 과정에 적극 참여하는"},
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -60,36 +60,28 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
+      skillName: "JS/TS",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "reactjs",
+      skillName: "ReactJS",
       fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "VueJS",
+      fontAwesomeClassname: "fab fa-vuejs"
     },
     {
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "Spring",
+      fontAwesomeClassname: "fab fa-java"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "swift",
+      fontAwesomeClassname: "fab fa-swift"
     },
     {
       skillName: "sql-database",
@@ -100,16 +92,16 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Github",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "jenkins",
+      fontAwesomeClassname: "fab fa-jenkins"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,7 +118,7 @@ const educationInfo = {
       duration: "2013.03 ~ 2020.02",
     },
     {
-      schoolName: "Stanford University",
+      schoolName: "Auckland International College",
       subHeader: "뉴질랜드 (오클랜드) 소재 고등학교",
       duration: "2009.08 ~ 2012.05",
     },
@@ -218,29 +210,55 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "경험",
+  subtitle: "배움과 도전을 거듭하며, 더 나은 개발과 협업을 위한 경험을 쌓아왔습니다.",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "공업사 스토어 관리 페이지",
+      projectDesc: "Cafe24 기반 & Ecount 등을\n 통합 사용가능한 자사 관리 프로그램 개발",
+      image: require("./assets/images/gongupsaLogo.png"),
+      disabled: true,
       footerLink: [
         {
-          name: "Visit Website",
+          name: "상세 보기",
           url: "http://saayahealth.com/"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "스페클립스 어드민 페이지",
+      projectDesc: "데이터 CRUD 와 정산, 통계 등\n 다양한 기능을 내포한 관리 페이지",
+      image: require("./assets/images/speclipseLogo.png"),
+      disabled: true,
       footerLink: [
         {
-          name: "Visit Website",
+          name: "상세 보기",
           url: "http://nextu.se/"
+        }
+      ]
+    },
+    {
+      projectName: "버디버디",
+      projectDesc: "3D 캐릭터와  상호작용하며\n 키우는 다마고치 스타일의 웹 앱",
+      image: require("./assets/images/projects/buddyLogo.png"),
+      disabled: false,
+      footerLink: [
+        {
+          name: "상세 보기",
+          url: "https://github.com/Janku-Projects/buddybuddy-fe"
+        }
+      ]
+    },
+    {
+      projectName: "그 외,",
+      projectDesc: "CICD, AWS 부터 기획,\n UIUX 레이아웃 구성 및 ERD 등 다양한 경험",
+      image: require("./assets/images/projects/logos.png"),
+      disabled: false,
+      footerLink: [
+        {
+          name: "상세 보기",
+          url: "https://www.notion.so/1c9cbd8e9cb1800595a0f425929a1442"
         }
       ]
     }
@@ -377,19 +395,19 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+    "커피챗은 언제든 환영합니다!",
+  number: "010-2488-9287",
+  email_address: "jannhyunsoo@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

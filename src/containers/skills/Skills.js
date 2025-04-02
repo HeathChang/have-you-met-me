@@ -56,7 +56,8 @@ export default function Skills() {
                           : "subTitle skills-text"
                       }>
                       <strong>{ skills?.key }:</strong>
-                      <em>{ skills?.value }:</em>
+                      <em>&nbsp;{skills?.value }</em>
+                      <strong>&nbsp;[개발자]</strong>
                     </p>
                 );
               }) }

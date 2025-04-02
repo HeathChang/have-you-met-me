@@ -7,20 +7,21 @@ import {Fade} from "react-reveal";
 
 export default function GithubProfileCard({prof}) {
   if (isHireable) {
-    prof.hireable = "Yes";
+    prof.hireable = "O";
   } else {
-    prof.hireable = "No";
+    prof.hireable = "X";
   }
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="contact">
-        <h1 className="prof-title">Reach Out to me!</h1>
+        <h1 className="prof-title">연락 방법</h1>
         <div className="row">
           <div className="main-content-profile">
             <div className="blog-header">
               <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
             </div>
-            <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
+            <h2 className="bio-text">전화번호: {emoji(String(contactInfo.number))}</h2>
+            <h2 className="bio-text">이메일: {emoji(String(contactInfo.email_address))}</h2>
             {prof.location !== null && (
               <div className="location-div">
                 <span className="desc-prof">
@@ -43,7 +44,7 @@ export default function GithubProfileCard({prof}) {
             )}
             <div className="opp-div">
               <span className="desc-prof">
-                Open for opportunities: {prof.hireable}
+                구직여부: {prof.hireable}
               </span>
             </div>
             <SocialMedia />

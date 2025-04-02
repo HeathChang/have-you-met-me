@@ -24,6 +24,7 @@ export default function Contact() {
             >
               {contactInfo.subtitle}
             </p>
+
             <div
               className={
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"

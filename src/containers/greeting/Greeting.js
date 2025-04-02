@@ -47,15 +47,15 @@ export default function Greeting() {
                 <div id="resume" className="empty-div"></div>
                 <SocialMedia />
                 <div className="button-greeting-div">
-                  <Button text="연락" href="#contact" />
+                  <Button text="연락처 확인" href="#contact" />
                   { greeting.resumeLink && (
                     <a
-                      href={ "https://www.notion.so/Have-you-met-Heath-29fdca7b209e4acc8496067014fbdbe8" }
+                      href={ "https://midnight-braid-2a6.notion.site/1a1cbd8e9cb18006a235d0894ff61692" }
                       download="Resume.pdf"
                       target="_blank"
                       className="download-link-button"
                     >
-                      <Button text="이력서" />
+                      <Button text="이력서 보러가기" />
                     </a>
                   ) }
                 </div>
