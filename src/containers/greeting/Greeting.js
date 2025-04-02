@@ -50,7 +50,7 @@ export default function Greeting() {
                   <Button text="연락처 확인" href="#contact" />
                   { greeting.resumeLink && (
                     <a
-                      href={ "https://midnight-braid-2a6.notion.site/1a1cbd8e9cb18006a235d0894ff61692" }
+                      href={ "https://midnight-braid-2a6.notion.site/Have-you-met-29fdca7b209e4acc8496067014fbdbe8" }
                       download="Resume.pdf"
                       target="_blank"
                       className="download-link-button"
