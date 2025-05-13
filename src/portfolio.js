@@ -161,7 +161,7 @@ const workExperiences = {
       company: "공업사 스토어",
       companylogo: require("./assets/images/gongupsaLogo.png"),
       color: [3, 30, 113],
-      date: "24.05 ~ 현재",
+      date: "24.05 ~ 25.05",
       desc: "자사 관리프로그램 개발,\n  CI/CD 구축, AWS 배포/서버 관리.\n",
       descBullets: [
         "Cafe24 기반 & Ecount 을  통합 사용가능한 자사 관리 프로그램 개발",
